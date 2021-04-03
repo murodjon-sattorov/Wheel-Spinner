@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.murodjhon_sattorov.wheelspinner.WheelSpinner
+        android:id="@+id/wheelSpinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="360dp"
+        app:m_arc_stroke_color="@android:color/white"
+        app:m_circle_stroke_color="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="168dp"
+        android:src="@drawable/wheel_pin"
+        app:layout_constraintCircle="@id/wheelSpinner"
+        app:layout_constraintCircleAngle="40"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="400dp" />
+
+    <ImageView
+        android:id="@+id/ivSelectedTattoo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/potato"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btnSpin"
+        app:layout_constraintEnd_toEndOf="@+id/btnSpin"
+        app:layout_constraintStart_toStartOf="@+id/btnSpin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.020"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/btnSpin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Spin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.962" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
